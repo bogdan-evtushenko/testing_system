@@ -45,18 +45,14 @@ istream & operator >> (istream & in, vll & a) {
     return in;
 }
 
-ll cur = 100;
+int rand(int a, int b) {
+    return a + rand() % (b - a + 1);
+}
 
 int main(int argc, char* argv[]) {
     srand(atoi(argv[1])); // atoi(s) converts an array of chars to int
    // ll n = rand() % cur + 1;
    // ll h = rand() % n + 1;
-    ll n = cur;
-    ll h = 15;
-    cout << n << " " << h << endl;;
-    rep(i, 0, n) {
-        cout << 1 << " ";
-    }
-    cout << endl;
+
     puts("");
 }

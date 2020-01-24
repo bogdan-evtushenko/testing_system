@@ -50,28 +50,6 @@ int main() {
     // freopen("rmq.out", "w", stdout);
     // ios;
     
-    ll n, k;
-    cin >> n >> k;
-    vll a(n);
-    cin >> a;
-    ll ans = 2e9;
-    rep(i, 0, n) {
-        ll oo = 0;
-        ll cnt = 1;
-        ll sum = 0;
-        if (i + k > n) break;
-        rep(j, i, i + k) {
-            if (a[j] > cnt) {
-                oo = 1;
-                break;
-            }
-            sum += cnt - a[j];
-            cnt++;
-        }
-        if (!oo)
-            ans = min(ans, sum);
-    }
-    if(ans == 2e9) cout << -1 << endl;
-    else cout << ans << endl;
+   
     return 0;
 }
